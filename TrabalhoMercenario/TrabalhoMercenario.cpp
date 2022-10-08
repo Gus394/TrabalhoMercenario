@@ -10,16 +10,17 @@ int main()
     Fila<int> f;
     inicializar(f);
     for (;;) {
-        queue(f, 10);
-        queue(f, 10);
-        queue(f, 10);
-        queue(f, 4);
-        dequeue(f);
-        dequeue(f);
-        dequeue(f);
+    queue(f, 10);
+    queue(f, 10);
+    queue(f, 10);
+    queue(f, 4);
+    dequeue(f);
+    dequeue(f);
+    dequeue(f);
         dequeue(f);
     }
     print(f);
+
     for (int i = 0; i < 256; i++) {
         std::cout << char(i) << " " << int(char(i)) << std::endl;
     }

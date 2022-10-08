@@ -46,11 +46,11 @@ namespace Estrutura {
     void dequeue(Fila<T>& f) {
         if (f.first != NULL) {
             Node<T>* aux = f.first;
-            f.first = f.first->prox;
+        f.first = f.first->prox;
             delete aux;
             if (f.first != NULL) {
-                f.first->prev = nullptr;
-            }
+        f.first->prev = nullptr;
+    }
         }
         //std::cout << "Fila já está vazia" << std::endl; // Mudar para throw catch
     }

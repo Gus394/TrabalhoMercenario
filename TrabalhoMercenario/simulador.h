@@ -5,7 +5,7 @@
 #include "fila.h"
 
 namespace Atendimento {
-
+	
 	struct Dias {
 		int qtd_dias = 5;
 		int minutos = 480; // 8 horas
