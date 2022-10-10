@@ -37,8 +37,9 @@ int main()
     system("CLS");
     
     dia.qtd_dias = 3;
+    secretaria.atendimentos_por_minuto = 1;
     secretaria.num_atendentes = Atendimento::descobrir_num_de_atendentes(dia, secretaria); //12; // 7 caso só sejam atendidas as pendentes e não cheguem mais pessoas além dessas
-    secretaria.atendimentos_por_minuto = secretaria.num_atendentes;
+    secretaria.atendimentos_por_minuto = secretaria.num_atendentes * secretaria.atendimentos_por_minuto;
 
     Atendimento::atender_clientes(secretaria, dia, f);
 
@@ -64,8 +65,9 @@ int main()
     dia2.pessoas_por_minuto = 5;
    
 
+    secretaria2.atendimentos_por_minuto = 1;
     secretaria2.num_atendentes = Atendimento::descobrir_num_de_atendentes(dia2, secretaria2); //15;
-    secretaria2.atendimentos_por_minuto = secretaria2.num_atendentes;
+    secretaria2.atendimentos_por_minuto = secretaria2.num_atendentes * secretaria2.atendimentos_por_minuto;
     Atendimento::atender_clientes(secretaria2, dia2, f2);
 
 }

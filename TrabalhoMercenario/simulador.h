@@ -67,7 +67,7 @@ namespace Atendimento {
 		if (dia.minutos > sec.minutos_de_trabalho) {
 			sec.atendimentos_pendentes += (dia.minutos - sec.minutos_de_trabalho) * dia.qtd_dias * dia.pessoas_por_minuto;
 		}
-		return (sec.atendimentos_pendentes + dia.pessoas_por_minuto * sec.minutos_de_trabalho * dia.qtd_dias) / ((sec.minutos_de_trabalho) * dia.qtd_dias);
+		return (sec.atendimentos_pendentes + dia.pessoas_por_minuto * sec.minutos_de_trabalho * dia.qtd_dias) / (sec.minutos_de_trabalho * dia.qtd_dias) / (sec.atendimentos_por_minuto);
 	}
 }
 
